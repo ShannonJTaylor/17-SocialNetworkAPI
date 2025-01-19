@@ -1,6 +1,6 @@
 const { Schema, model, Types } = require('mongoose');
 
-const ReactionSchema = new Schema(
+const reactionSchema = new Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
@@ -9,12 +9,12 @@ const ReactionSchema = new Schema(
         reactionBody: {
             type: String,
             required: true,
-            maxlenght: 280,
+            maxlengh: 280,
         },
         createdAt: {
             type: Date,
             default: Date.now,
-            get (timestamp) => new Date(timestamp).toLocaleString(),
+            get: (timestamp) => new Date(timestamp).toLocaleString(),
         },
     },
     {
@@ -31,7 +31,7 @@ const thoughtSchema = new Schema(
             type: String,
             required: true, 
             minlength: 1,
-            maxlenght: 280,
+            maxlengh: 280,
         },
         createdAt: {
             type: Date,
@@ -45,7 +45,7 @@ const thoughtSchema = new Schema(
         reactions: [reactionSchema],
     },
     {
-        toJSON {
+        toJSON: {
             virtuals: true,
             getters: true,
         },
