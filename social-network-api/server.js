@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(require('./routes'));
 
 //Connect to the MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB', {
+mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB', {  //this can and should be set up to pull from the .env file
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -22,7 +22,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB', {
 mongoose.set('debug', true);
 
 //Start the server
-app.listen(PORT, () => console.log('Server running on http://localhose:${PORT}'));
+app.listen(PORT, () => console.log('Server running on http://localhost:${PORT}'));
 
 
 
