@@ -11,7 +11,7 @@ module.exports = {
       }
     },
     //Get a single thought by ID
-async get ThoughtById(req, res) {
+    async getThoughtById(req, res) {
     try {
         const thought = await Thought.findById(req.params.id);
         if (!thought) {
@@ -23,7 +23,7 @@ async get ThoughtById(req, res) {
       }
     },
     //Create a new thought 
-async createThought(req, res) {
+    async createThought(req, res) {
     try {
         //Create the new thought using the request body
         const thought = await Thought.create(req.body);
