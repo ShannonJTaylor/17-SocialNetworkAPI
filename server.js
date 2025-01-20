@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -14,12 +16,12 @@ app.use('/api/users', require('./social-network-api/routes/api/userRoutes'));
 app.use('/api/thoughts', require('./social-network-api/routes/api/thoughtRoutes'));
 
 //Connect to the MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB', {  //this can and should be set up to pull from the .env file
+mongoose.connect(process.env.MONGODB_URI, {  //this can and should be set up to pull from the .env file
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
-//Log Mongo queries being executed
+
 mongoose.set('debug', true);
 
 //Start the server
