@@ -16,10 +16,8 @@ app.use('/api/users', require('./social-network-api/routes/api/userRoutes'));
 app.use('/api/thoughts', require('./social-network-api/routes/api/thoughtRoutes'));
 
 //Connect to the MongoDB
-mongoose.connect(process.env.MONGODB_URI, {  //this can and should be set up to pull from the .env file
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGODB_URI,);   //this can and should be set up to pull from the .env file 
+
 
 
 mongoose.set('debug', true);
