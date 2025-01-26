@@ -42,6 +42,7 @@ const thoughtSchema = new Schema(
         username: {
             type: String,
             required: true,
+            ref: 'User', //Link the thought to the User model
         },
         reactions: [reactionSchema],
     },
