@@ -23,8 +23,12 @@ router
 
 //Routes for managing reactions
 router
-    .route('/:thoughtId/reactions/:reactionId')
+    .route('/:thoughtId/reactions')
     .post(addReaction)
+
+    //route for deleting a reaction from a thought
+router
+    .route('/:thoughtId/reactions/:reactionId')
     .delete(removeReaction);
 
 module.exports = router;
