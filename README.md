@@ -8,7 +8,7 @@ This is a RESTful API for a Social Network application that allows users to mana
 
 ## Walk-Through Video
 
-
+https://app.screencastify.com/v3/watch/rQ14DUeQPwtk8Vo4q0wr
 
 
 ---

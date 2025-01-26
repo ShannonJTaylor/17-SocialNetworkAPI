@@ -15,6 +15,7 @@ router
     .get(getThoughts) //Get all thoughts
     .post(createThought); //Create a new thought
 
+//Routes for a specific thought by ID
 router
     .route('/:id') //Routes for a specific thought by ID
     .get(getThoughtById) //Get a thought by ID
