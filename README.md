@@ -4,12 +4,27 @@
 
 This is a RESTful API for a Social Network application that allows users to manage their profiles, thoughts, and friends. It leverages MongoDB as the database and Express.js for routing, providing endpoints for creating, updating, retrieving, and deleting users and thoughts. This API also supports managing friendships and adding reactions to thoughts.
 
+---
+
+## Walk-Through Video
+
+
+
+
+---
+
 ## Table of Contents
 
 -[Features](#features)
 -[TechnologiesUsed](#technologies_used)
 -[Setup](#setup)
--[]
+-[Routes](#routes)
+-[ExampleRequests](#example_requests)
+-[Testing](#testing)
+-[Troubleshooting](#troubleshooting)
+-[License](#license)
+-[Contributing](#contributing)
+
 
 
 ## Features
@@ -24,6 +39,8 @@ This is a RESTful API for a Social Network application that allows users to mana
   - Retrieve all thoughts or a specific thought by ID
   - Add or remove reactions to thoughts
 
+  ---
+
 ## Technologies Used
 
 - **Backend**:
@@ -34,6 +51,8 @@ This is a RESTful API for a Social Network application that allows users to mana
   
 - **Utilities**:
   - dotenv (for environment variable management)
+
+  ---
 
 ## Setup
 
@@ -70,6 +89,8 @@ Before you can run this project locally, make sure you have the following instal
 
 Your API will be available at `http://localhost:3001`.
 
+---
+
 ## Routes
 
 ### Users
@@ -91,6 +112,8 @@ Your API will be available at `http://localhost:3001`.
 - `DELETE /api/thoughts/:id`: Delete a thought by ID
 - `POST /api/thoughts/:thoughtId/reactions`: Add a reaction to a thought
 - `DELETE /api/thoughts/:thoughtId/reactions/:reactionId`: Remove a reaction from a thought
+
+---
 
 ## Example Requests
 
