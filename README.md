@@ -4,6 +4,14 @@
 
 This is a RESTful API for a Social Network application that allows users to manage their profiles, thoughts, and friends. It leverages MongoDB as the database and Express.js for routing, providing endpoints for creating, updating, retrieving, and deleting users and thoughts. This API also supports managing friendships and adding reactions to thoughts.
 
+## Table of Contents
+
+-[Features](#features)
+-[TechnologiesUsed](#technologies_used)
+-[Setup](#setup)
+-[]
+
+
 ## Features
 
 - **User Management**:
@@ -62,9 +70,9 @@ Before you can run this project locally, make sure you have the following instal
 
 Your API will be available at `http://localhost:3001`.
 
-### Routes
+## Routes
 
-#### Users
+### Users
 
 - `GET /api/users`: Get all users
 - `POST /api/users`: Create a new user
@@ -74,7 +82,7 @@ Your API will be available at `http://localhost:3001`.
 - `POST /api/users/:userId/friends/:friendId`: Add a friend
 - `DELETE /api/users/:userId/friends/:friendId`: Remove a friend
 
-#### Thoughts
+### Thoughts
 
 - `GET /api/thoughts`: Get all thoughts
 - `POST /api/thoughts`: Create a new thought
@@ -84,9 +92,9 @@ Your API will be available at `http://localhost:3001`.
 - `POST /api/thoughts/:thoughtId/reactions`: Add a reaction to a thought
 - `DELETE /api/thoughts/:thoughtId/reactions/:reactionId`: Remove a reaction from a thought
 
-### Example Requests
+## Example Requests
 
-#### Create a User
+### Create a User
 - **Method**: POST
 - **Endpoint**: `/api/users`
 - **Body**:
@@ -97,15 +105,15 @@ Your API will be available at `http://localhost:3001`.
     }
     ```
 
-#### Get All Users
+### Get All Users
 - **Method**: GET
 - **Endpoint**: `/api/users`
 
-#### Add a Friend
+### Add a Friend
 - **Method**: POST
 - **Endpoint**: `/api/users/:userId/friends/:friendId`
 
-#### Create a Thought
+### Create a Thought
 - **Method**: POST
 - **Endpoint**: `/api/thoughts`
 - **Body**:
@@ -116,26 +124,31 @@ Your API will be available at `http://localhost:3001`.
         "userId": "userIdHere"
     }
     ```
+---
 
-### Testing
+## Testing
 
 Use Postman or Insomnia to test the API endpoints. For testing purposes, you can use the following mock data for a user:
 
 - `userId`: `63c1c67b0f1b2c4e56dbf8e1` (replace with a valid MongoDB ObjectId)
 - `friendId`: `63c1c67b0f1b2c4e56dbf8e2` (replace with another valid MongoDB ObjectId)
 
-### Troubleshooting
+---
+
+## Troubleshooting
 
 - **Error: Cannot connect to MongoDB**: Ensure MongoDB is running locally or connected to your cloud database (e.g., MongoDB Atlas).
 - **Error: 'User not found'**: Double-check the user ID in the request URL.
 
-### License
+---
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-### Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/new-feature`)
