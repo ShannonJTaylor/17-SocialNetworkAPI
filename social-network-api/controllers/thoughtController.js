@@ -26,6 +26,11 @@ module.exports = {
     //Create a new thought 
     async createThought(req, res) {
     try {
+      //Check if userId is porvided in the request body
+      if (!req.body.userId) {
+        return res.status(400).json({ message: 'A userId is required to create a thought!' });
+      }
+        
         //Create the new thought using the request body
         const thought = await Thought.create(req.body);
 
